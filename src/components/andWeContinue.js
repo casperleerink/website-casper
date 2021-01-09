@@ -23,21 +23,6 @@ class AndWeContinue {
         this._panners = [];
         this._synths = [];
         this._loops = [];
-        // this._panners = [
-        //     new Tone.Panner(0).toDestination(),
-        //     new Tone.Panner(0).toDestination(),
-        //     new Tone.Panner(0).toDestination(),
-        //     new Tone.Panner(0).toDestination(),
-        //     new Tone.Panner(0).toDestination(),
-        //     new Tone.Panner(0).toDestination(),
-        //     new Tone.Panner(0).toDestination(),
-        // ]
-        // this._synths = this._panners.map(panner => {
-        //     return new Tone.Synth(options).connect(panner);
-        // });
-        // this._loops = this._panners.map(p => {
-        //     return new Tone.Loop();
-        // });
 
         this._limit = 8;
         this._frame = this.random(data);
@@ -58,6 +43,7 @@ class AndWeContinue {
             Tone.Transport.start();
             this.activate(idx);
             this._started = true;
+            console.log(this._started);
         } else {
             if (this._active[idx]) {
                 this.deactivate(idx);
@@ -115,7 +101,10 @@ class AndWeContinue {
         this._synths.forEach(s => s.dispose());
         this._panners.forEach(s => s.dispose());
         this._loops.forEach(s => s.dispose());
-        Tone.Destination.dispose();
+        this._player.dispose();
+        // this._player.stop();
+        // Tone.Destination.dispose();
+        console.log(this._started);
     }
 
 }
