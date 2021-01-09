@@ -18,7 +18,6 @@ function VideoPage({data}) {
             <SEO title="Music"/>
             <div className={style.container}>
                 <h1>Selected Videos</h1>
-                {controller && 
                     <ul className={style.ul}>
                         {nodes.map(node => {
                             return (
@@ -26,7 +25,6 @@ function VideoPage({data}) {
                             )
                         })}
                     </ul>
-                }
             </div>
             <Footer />
         </Layout>

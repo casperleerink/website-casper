@@ -101,7 +101,7 @@ class AndWeContinue {
         this._synths.forEach(s => s.dispose());
         this._panners.forEach(s => s.dispose());
         this._loops.forEach(s => s.dispose());
-        this._player.dispose();
+        this._player && this._player.dispose();
         // this._player.stop();
         // Tone.Destination.dispose();
         console.log(this._started);
