@@ -1,21 +1,40 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+// import {SVG} from '@svgdotjs/svg.js'
+// import style from "../styling/index.module.css"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Hero from '../components/Hero'
+import AndWeContinue from '../components/andWeContinue'
+import NavigationImages from '../components/NavigationImages'
+import Footer from '../components/Footer'
+// import ImageGallery from "../components/imageGallery"
+// import HomeSVG from "../components/homeSVG"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
-
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Home"/>
+      <Hero andwecontinue={new AndWeContinue()}/>
+      <NavigationImages data={[
+        {
+          title: "music",
+          image: "piano-hands.jpg",
+          path: "/music",
+        },
+        {
+          title: "video",
+          image: "and-we-continue-background.png",
+          path: "/video",
+        },
+        {
+          title: "code",
+          image: "midi-keyboard.jpg",
+          path: "/code",
+        },
+      ]}/>
+      <Footer />
+    </Layout>
+  )
+}
 export default IndexPage

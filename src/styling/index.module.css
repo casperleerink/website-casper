@@ -1,0 +1,9 @@
+.container {
+    display: block;
+    width: 100%;
+    min-height: calc(100vh - 6rem);
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--primary-color-darker);
+    /* opacity: 0.2; */
+}

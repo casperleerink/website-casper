@@ -1,0 +1,70 @@
+.container {
+    width: 100%;
+    display: block;
+    background-color: var(--text);
+    padding: 2rem 5%;
+    color: var(--secondary);
+}
+.container h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+.container label {
+    display: block;
+    width: 100%;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+.container input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+}
+.container input:focus, .container textarea:focus {
+    background-color: var(--background);
+    outline: none;
+    /* border: none; */
+}
+
+.message textarea {
+    /* height: 6rem; */
+    overflow-y: scroll;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    padding: 0.4rem 2.4rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.button svg {
+    font-size: 1.8rem;
+}
+
+.social {
+    color: var(--background);
+}
+
+.social svg {
+    margin-left: 2.4rem;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,83 @@
+.container {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.imageContainer {
+    display: block;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: inherit;
+    cursor: pointer;
+    position: relative;
+}
+.imageContainer h2 {
+    position: absolute;
+    /* color: var(--tertiary); */
+    font-size: 1.3rem;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.imageContainer:hover .image {
+    opacity: 0.3;
+}
+.imageContainer:hover h2 {
+    opacity: 1;
+}
+.image {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.image img {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+.audioPlayer {
+    display: flex;
+    /* padding: 0.5rem; */
+    /* position: absolute; */
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: var(--darker);
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audioPlayer svg {
+    color: var(--background);
+    cursor: pointer;
+}
+.audioPlayer progress {
+    height: 1rem;
+    appearance: none;
+    border: none;
+    width: 80%;
+    background-color: var(--background);
+    opacity: 0.7;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.audioPlayer progress::-moz-progress-bar, .audioPlayer progress::-webkit-progress-bar {
+    background-color: var(--secondary);
+    border-radius: 0.2rem;
+}
+
+.description {
+    display: block;
+    width: 100%;
+}

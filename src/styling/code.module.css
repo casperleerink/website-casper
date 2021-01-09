@@ -1,0 +1,43 @@
+.container {
+    padding: 5%;
+}
+
+.container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.imageContainer {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 2px;
+    border-radius: 0.5rem;
+    opacity: 0;
+    transform: translateY(90vh);
+}
+.imageContainer h2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    /* padding: 0.5rem; */
+    text-align: center;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: bold;
+}
+.imageContainer:hover h2 {
+    opacity: 1;
+}
+
+.image {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.image img {
+    border-radius: 0.5rem;
+}
+.image:hover {
+    opacity: 0.5;
+}

@@ -1,0 +1,90 @@
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 5%; */
+    padding: 1.2rem 5%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    padding: 0.5rem;
+    padding-left: 0;
+}
+.title:hover::after {
+    content: "My name, simultaneously functioning as a link back to the home page";
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: normal;
+    opacity: 0.3;
+    font-size: 1rem;
+}
+
+.titleSide {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+.navItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+
+.navItem {
+    display: inline-block;
+    font-size: 1.2rem;
+    position: relative;
+}
+.navItem p {
+    display: none;
+}
+.navItem:hover p {
+    display: block;
+}
+.aboutSide {
+    top: -30%;
+    left: -200%;
+    width: 500%;
+}
+.musicSide {
+    bottom: -30%;
+    left: -100%;
+    width: 500%;
+}
+.videoSide {
+    top: -40%;
+    left: -50%;
+    width: 500%;
+}
+.codeSide {
+    bottom: -40%;
+    left: -70%;
+    width: 500%;
+}
+.listSide {
+    top: -40%;
+    left: 0%;
+    width: 500%;
+}
+
+.link {
+    display: block;
+    padding: 0.5rem;
+}
+.navItem:last-child .link {
+    padding-right: 0;
+}
+.active {
+    color: var(--tertiary)
+}
