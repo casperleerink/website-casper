@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import Layout from '../components/layout';
 import style from '../styling/video.module.css';
 import SEO from '../components/seo';
 import {graphql} from 'gatsby';
 import VideoItem from '../components/VideoItem';
-import ScrollMagic from 'scrollmagic';
+// import ScrollMagic from 'scrollmagic';
 import Footer from '../components/Footer'
 
 function VideoPage({data}) {
     const {nodes} = data.allMarkdownRemark;
-    const [controller, setController] = useState(false);
-    useEffect(() => {
-        setController(new ScrollMagic.Controller());
-    }, []);
+    // const [controller, setController] = useState(false);
+    // useEffect(() => {
+    //     setController(new ScrollMagic.Controller());
+    // }, []);
     return (
         <Layout>
             <SEO title="Music"/>
@@ -22,7 +22,7 @@ function VideoPage({data}) {
                     <ul className={style.ul}>
                         {nodes.map(node => {
                             return (
-                                <VideoItem node={node} controller={controller} key={node.frontmatter.title}/>
+                                <VideoItem node={node} key={node.frontmatter.title}/>
                             )
                         })}
                     </ul>

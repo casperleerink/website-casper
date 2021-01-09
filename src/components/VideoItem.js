@@ -4,7 +4,7 @@ import style from '../styling/video.module.css'
 import {gsap} from 'gsap'
 import ScrollMagic from 'scrollmagic'
 
-function VideoItem({node, controller}) {
+function VideoItem({node}) {
     const [expanded, setExpanded] = useState(false);
     const containerRef = useRef(null);
     const youtubeRef = useRef(null);
@@ -17,6 +17,7 @@ function VideoItem({node, controller}) {
     // }
 
     useEffect(() => {
+        const controller = new ScrollMagic.Controller();
         new ScrollMagic.Scene({triggerElement: containerRef.current})
             .on('enter', () => {
                 gsap.to(imageRef.current, {x: 0, duration: 0.5});
@@ -27,7 +28,7 @@ function VideoItem({node, controller}) {
                 gsap.to(imageRef.current, {x: "-120%", duration: 0.5});
             })
             .addTo(controller);
-    }, [controller]);
+    }, []);
 
     
     //YOUTUBE BUSINESS
