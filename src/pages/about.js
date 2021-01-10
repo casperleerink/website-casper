@@ -1,13 +1,16 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import Layout from "../components/layout"
 import {graphql} from "gatsby"
 import style from "../styling/about.module.css"
 import CImage from "../components/CImage"
+import {gsap} from "gsap"
+import Footer from '../components/Footer'
 
 function About({data}) {
     const [composerTitle, setComposerTitle] = useState("");
     const [composerDescription, setComposerDescription] = useState("");
     const { frontmatter, html } = data.markdownRemark;
+    const imageRef = useRef(null);
 
     const fetchComposer = async () => {
         const listFetch = await fetch("https://en.wikipedia.org/w/api.php?&origin=*&action=query&list=categorymembers&cmtitle=Category:21st-century_classical_composers&cmlimit=500&format=json");
@@ -21,6 +24,10 @@ function About({data}) {
         setComposerTitle(composer.title);
         setComposerDescription(composer.extract);
     }
+
+    useEffect(() => {
+        gsap.fromTo(imageRef.current, {opacity: 0}, {opacity: 1, duration: 4});
+    }, []);
     return (
         <Layout>
             <div className={style.container}>
@@ -31,12 +38,15 @@ function About({data}) {
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
                 </div>
+                <div ref={imageRef} style={{width: "40%"}}>
                 <CImage 
                     cloudName="casperleerink" 
                     photoId={frontmatter.image} 
                     className={style.imgContainer}
-                    crop="scale"
+                    crop="fill"
+                    aspectRatio={9/12}
                 />
+                </div>
             </div>
             <div className={style.wikiContainer}>
                 <h1 className={style.quote}><em>'Casper, your bio is so short! I want to read more!'</em></h1>
@@ -51,6 +61,7 @@ function About({data}) {
                     Sourced from Wikipedia
                 </a></em></p>
             </div>
+            <Footer/>
         </Layout>
     )
 }

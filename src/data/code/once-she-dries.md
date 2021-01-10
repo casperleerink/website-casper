@@ -1,6 +1,6 @@
 ---
 templateKey: code
-title: "Breathing Bass Online Opera: Once She Dries"
-image: casper-website/once-she-dries.png
+title: "Once She Dries"
+image: breathingbass/coral-cloud-abstract.jpg
 url: https://once-she-dries.netlify.app/
 ---

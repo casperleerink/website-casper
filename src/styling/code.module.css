@@ -1,43 +1,84 @@
 .container {
     padding: 5%;
+    overflow-x: hidden;
 }
 
 .container h1 {
     font-size: 2rem;
     font-weight: bold;
 }
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+    padding: 1rem 0;
+}
+
 .imageContainer {
     display: block;
-    width: 100%;
-    position: relative;
-    padding: 2px;
-    border-radius: 0.5rem;
-    opacity: 0;
-    transform: translateY(90vh);
+    width: 50%;
+    /* position: relative; */
 }
-.imageContainer h2 {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    /* padding: 0.5rem; */
-    text-align: center;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
+.textContainer {
+    display: block;
+    width: 50%;
+    padding-left: 1rem;
+}
+.textContainer h2 {
     font-weight: bold;
-}
-.imageContainer:hover h2 {
-    opacity: 1;
+    font-size: 2rem;
 }
 
 .image {
     opacity: 1;
-    transition: opacity 0.3s;
+    background-color: var(--secondary);
 }
 .image img {
-    border-radius: 0.5rem;
+    transition: opacity 0.3s;
+    opacity: 0.7;
 }
-.image:hover {
+.image:hover img {
     opacity: 0.5;
+}
+
+.button {
+    border: none;
+    background-color: inherit;
+    border-radius: 0.5rem;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+}
+.button svg {
+    font-size: 1.3rem;
+}
+
+.github {
+    padding: 2rem;
+    font-size: 5rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.github a {
+    position:relative;
+}
+.github a:hover::after {
+    content: "Find repositories on my github page.";
+    position: absolute;
+    top: -30%;
+    left: -50%;
+    width: 400%;
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text);
+    font-family: 'Shadows Into Light', cursive;
+    opacity: 0.3;
+}
+
+.github a:hover {
+    color: var(--tertiary);
+    opacity: 1;
 }

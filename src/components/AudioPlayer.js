@@ -4,6 +4,7 @@ import {FaPlay, FaPause} from 'react-icons/fa'
 function AudioPlayer({
     src,
     className,
+    playCallback,
 }) {
     const [playing, setPlaying] = useState(false);
     const [progress, setProgress] = useState(0);
@@ -15,10 +16,12 @@ function AudioPlayer({
     },[]);
     const pause = () => {
         audioTag.current.pause();
+        playCallback(false);
         setPlaying(false);
     }
     const play = () => {
         audioTag.current.play();
+        playCallback(true);
         setPlaying(true);
     }
     const handleClick = (e) => {

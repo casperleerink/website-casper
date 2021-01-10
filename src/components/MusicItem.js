@@ -8,25 +8,26 @@ function MusicItem({node, idx}) {
     const [expanded, setExpanded] = useState(false);
     const containerRef = useRef(null);
     useEffect(() => {
-        gsap.fromTo(
-            containerRef.current, 
-            {x: "200%", rotation: Math.random() * 90 - 45, opacity: 0}, 
-            {x: 0, rotation: 0, duration: 1, opacity: 1, delay: idx * 0.3 + 0.3}
-        );
+            gsap.fromTo(
+                containerRef.current, 
+                {x: "100vw", rotation: Math.random() * 90 - 45, opacity: 0}, 
+                {x: 0, rotation: 0, duration: 1, opacity: 1, delay: idx * 0.3 + 0.3}
+            );
     }, [idx]);
     return (
-        <li className={style.container} ref={containerRef} style={{transform: "translateX(200%)"}}>
+        <li className={style.container} ref={containerRef} style={{transform: "translateX(100vw)"}}>
             <button className={style.imageContainer} onClick={() => {setExpanded(!expanded)}}>
-                <h2>{node.frontmatter.title}</h2>
                 <CImage 
                     cloudName="casperleerink" 
                     photoId={node.frontmatter.image} 
                     className={style.image}
                     crop="fill"
-                    aspectRatio="1"
+                    gravity="face"
+                    aspectRatio="2"
                 />
             </button>
-            <AudioPlayer src={node.frontmatter.audio} className={style.audioPlayer}/>
+            <AudioPlayer src={node.frontmatter.audio} className={style.audioPlayer} playCallback={(b) => setExpanded(b)}/>
+            <h2>{node.frontmatter.title}</h2>
             {expanded && <div className={style.description}>
                 <div dangerouslySetInnerHTML={{__html: node.html}}/>    
             </div>}

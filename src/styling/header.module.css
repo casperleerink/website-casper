@@ -17,7 +17,7 @@
     padding-left: 0;
 }
 .title:hover::after {
-    content: "My name, simultaneously functioning as a link back to the home page";
+    content: "My name, and also a link :o";
     position: absolute;
     top: 5%;
     left: 10%;

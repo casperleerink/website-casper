@@ -3,6 +3,9 @@ key: about
 title: Hello!
 image: headshot.jpg
 ---
+
+Welcome to my life story, you have come this far to read what I am doing in this world...
+
 Casper Leerink (1995) originally had two great affections, Music and Technology. After high school, torn between the two, he chose to pursue a career in music. From 2013 until 2017 he studied Piano performance with Sepp Grotenhuis at ArtEZ University of the Arts in Zwolle, resulting in his graduation in July 2017. Because Casper’s interests grew bigger than the piano, he managed to start a second major at ArtEZ in Composition, for which he studied with Alex Manassen and Wilbert Bulsink.
 
 After his graduation, Casper moved to Vancouver in Canada to study composition at the Simon Fraser University where he is currently persuing his Master in Fine Arts with topics in interactive composition and machine learning.

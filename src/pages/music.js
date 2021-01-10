@@ -4,6 +4,7 @@ import {graphql} from 'gatsby'
 import SEO from '../components/seo'
 import CImage from '../components/CImage'
 import style from '../styling/music.module.css'
+import Footer from '../components/Footer'
 
 // import AudioPlayer from 'react-h5-audio-player';
 // import 'react-h5-audio-player/lib/styles.css';
@@ -17,7 +18,7 @@ function Music({data}) {
         <Layout>
             <SEO title="Music"/>
             <div className={style.container}>
-                <h1>Selected Works</h1>
+                <h1 className={style.selectedWorks}>Selected Works</h1>
                 <ul className={style.ul}>
                     {nodes.map((node, idx) => {
                         return (
@@ -41,6 +42,7 @@ function Music({data}) {
                     </p>
                 </div>
             </div>
+            <Footer/>
         </Layout>
     )
 }

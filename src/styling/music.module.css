@@ -8,11 +8,24 @@
     padding: 0.5rem 0;
 }
 
+.selectedWorks {
+    position: relative;
+}
+.selectedWorks:hover::after {
+    content: "Some of my music, but not all...";
+    position: absolute;
+    top: -15%;
+    left: 10%;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: normal;
+    opacity: 0.3;
+    font-size: 1rem;
+}
 .ul {
     display: grid;
     list-style-type: none;
     /* padding: 5%; */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 1rem;
 }
 

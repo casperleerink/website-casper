@@ -43,7 +43,6 @@ class AndWeContinue {
             Tone.Transport.start();
             this.activate(idx);
             this._started = true;
-            console.log(this._started);
         } else {
             if (this._active[idx]) {
                 this.deactivate(idx);
@@ -102,9 +101,6 @@ class AndWeContinue {
         this._panners.forEach(s => s.dispose());
         this._loops.forEach(s => s.dispose());
         this._player && this._player.dispose();
-        // this._player.stop();
-        // Tone.Destination.dispose();
-        console.log(this._started);
     }
 
 }

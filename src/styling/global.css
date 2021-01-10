@@ -24,9 +24,9 @@ a {
     color: var(--text);
     text-decoration: none;
 }
-a:hover {
+/* a:hover {
     opacity: 0.8;
-}
+} */
 
 .sideText {
     font-family: 'Shadows Into Light', cursive;
