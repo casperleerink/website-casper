@@ -35,8 +35,8 @@ function CodeItem({node, idx, amt, callback}) {
             </div>
         </div>
         <div>
-            <button className={style.button} onClick={() => handleBtn(idx > 0 ? idx-1 : amt)}><GrPrevious/></button>
-            <button className={style.button} onClick={() => handleBtn(idx >= amt ? 0 : idx+1)}><GrNext/></button>
+            <button className={style.button} aria-label="Previous" onClick={() => handleBtn(idx > 0 ? idx-1 : amt)}><GrPrevious/></button>
+            <button className={style.button} aria-label="Next" onClick={() => handleBtn(idx >= amt ? 0 : idx+1)}><GrNext/></button>
         </div>
         </>
     )

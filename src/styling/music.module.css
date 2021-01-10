@@ -50,3 +50,31 @@
 .container a {
     opacity: 0.7;
 }
+
+.soundcloud {
+    padding: 2rem;
+    font-size: 5rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.soundcloud a {
+    position:relative;
+}
+.soundcloud a:hover::after {
+    content: "More music on my soundcloud!";
+    position: absolute;
+    top: -30%;
+    left: -50%;
+    width: 400%;
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text);
+    font-family: 'Shadows Into Light', cursive;
+    opacity: 0.3;
+}
+
+.soundcloud a:hover {
+    color: var(--tertiary);
+    opacity: 1;
+}

@@ -62,3 +62,31 @@
     width: 100%;
     height: 100%;
 }
+
+.youtube {
+    padding: 2rem;
+    font-size: 5rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.youtube a {
+    position:relative;
+}
+.youtube a:hover::after {
+    content: "My youtube Channel!";
+    position: absolute;
+    top: -30%;
+    left: -50%;
+    width: 400%;
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text);
+    font-family: 'Shadows Into Light', cursive;
+    opacity: 0.3;
+}
+
+.youtube a:hover {
+    color: var(--tertiary);
+    opacity: 1;
+}

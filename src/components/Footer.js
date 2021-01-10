@@ -5,7 +5,8 @@ import {FaSoundcloud, FaYoutube, FaGithub} from 'react-icons/fa'
 
 function Footer() {
     return (
-        <div className={style.container}>
+        <form name="Contact Form" method="POST" data-netlify="true" className={style.container}>
+            <input type="hidden" name="form-name" value="Contact Form" />
             <h1>Contact Me!</h1>
             <label className={style.email}>
                 Your E-Mail
@@ -16,14 +17,14 @@ function Footer() {
                 <textarea name="message" rows="6" maxLength="10000"/>
             </label>
             <div className={style.buttonContainer}>
-                <button className={style.button}><MdSend aria-label="Send"/></button>
+                <button className={style.button} type="submit"><MdSend aria-label="Send"/></button>
                 <div className={style.social}>
                     <FaSoundcloud/>
                     <FaYoutube/>
                     <FaGithub/>
                 </div>
             </div>
-        </div>
+        </form>
     )
 }
 

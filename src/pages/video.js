@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import {graphql} from 'gatsby';
 import VideoItem from '../components/VideoItem';
 // import ScrollMagic from 'scrollmagic';
+import {FaYoutube} from 'react-icons/fa'
 import Footer from '../components/Footer'
 
 function VideoPage({data}) {
@@ -25,6 +26,9 @@ function VideoPage({data}) {
                             )
                         })}
                     </ul>
+                    <div className={style.youtube}>
+                        <a href="https://www.youtube.com/channel/UC0dDP_jMQ8_U8Mm81o1YgXA" target="__blank" aria-label="Youtube Channel"><FaYoutube /></a>
+                    </div>
             </div>
             <Footer />
         </Layout>

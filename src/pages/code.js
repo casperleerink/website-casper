@@ -28,7 +28,7 @@ function CodePage({data}) {
                 />
                 {/* <ImageGallery imgs={Items} amount={data.allMarkdownRemark.nodes.length}/> */}
                 <div className={style.github}>
-                    <a href="https://github.com/casperleerink" target="__blank"><FaGithub /></a>
+                    <a href="https://github.com/casperleerink" target="__blank" aria-label="Github Page"><FaGithub /></a>
                 </div>
             </div>
             <Footer />
