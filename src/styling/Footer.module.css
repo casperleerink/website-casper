@@ -64,7 +64,8 @@
     color: var(--background);
 }
 
-.social svg {
+.social a {
+    color: var(--background);
     margin-left: 2.4rem;
     font-size: 1.2rem;
 }

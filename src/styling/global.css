@@ -44,3 +44,10 @@ a {
     left: 0%;
     width: 100%;
 }
+
+@media only screen and (max-width: 500px) {
+    .sideText {
+        font-size: 0.8rem !important;
+        opacity: 0.15;
+    }
+}

@@ -38,7 +38,7 @@ function About({data}) {
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
                 </div>
-                <div ref={imageRef} style={{width: "40%"}}>
+                <div ref={imageRef} className={style.gridImage}>
                 <CImage 
                     cloudName="casperleerink" 
                     photoId={frontmatter.image} 

@@ -4,7 +4,7 @@ import style from '../styling/code.module.css'
 import CImage from '../components/CImage'
 import {GrNext, GrPrevious} from 'react-icons/gr'
 
-function CodeItem({node, idx, amt, callback}) {
+function CodeItem({node, idx, amt, nodes, callback}) {
     const itemRef = useRef(null);
     useEffect(() => {
         gsap.to(itemRef.current, {opacity: 1, x: 0, duration: 1});
@@ -34,8 +34,13 @@ function CodeItem({node, idx, amt, callback}) {
                 <p><a href={node.frontmatter.url} target="__blank">{node.frontmatter.url}</a></p>
             </div>
         </div>
-        <div>
+        <div className={style.navigation}>
             <button className={style.button} aria-label="Previous" onClick={() => handleBtn(idx > 0 ? idx-1 : amt)}><GrPrevious/></button>
+            {nodes.map((n, i) => (
+                <button className={style.dot} aria-label={`Go to: ${n.frontmatter.title}`} onClick={() => handleBtn(i)}>
+                    °
+                </button>
+            ))}
             <button className={style.button} aria-label="Next" onClick={() => handleBtn(idx >= amt ? 0 : idx+1)}><GrNext/></button>
         </div>
         </>

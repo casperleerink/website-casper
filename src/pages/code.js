@@ -24,6 +24,7 @@ function CodePage({data}) {
                     node={currentNode} 
                     idx={currentIndex}
                     amt={nodes.length-1}
+                    nodes={nodes}
                     callback={(idx) => setCurrentIndex(idx)}
                 />
                 {/* <ImageGallery imgs={Items} amount={data.allMarkdownRemark.nodes.length}/> */}

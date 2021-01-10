@@ -19,9 +19,9 @@ function Footer() {
             <div className={style.buttonContainer}>
                 <button className={style.button} type="submit"><MdSend aria-label="Send"/></button>
                 <div className={style.social}>
-                    <FaSoundcloud/>
-                    <FaYoutube/>
-                    <FaGithub/>
+                    <a href="https://soundcloud.com/casper-leerink" target="__blank" aria-label="Soundcloud Page"><FaSoundcloud /></a>
+                    <a href="https://www.youtube.com/channel/UC0dDP_jMQ8_U8Mm81o1YgXA" target="__blank" aria-label="Youtube Channel"><FaYoutube /></a>
+                    <a href="https://github.com/casperleerink" target="__blank" aria-label="Github Page"><FaGithub /></a>
                 </div>
             </div>
         </form>

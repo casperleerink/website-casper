@@ -43,16 +43,29 @@
 .image:hover img {
     opacity: 0.5;
 }
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 .button {
     border: none;
     background-color: inherit;
     border-radius: 0.5rem;
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1.5rem;
     cursor: pointer;
 }
 .button svg {
     font-size: 1.3rem;
+}
+.dot {
+    border: none;
+    background-color: inherit;
+    padding: 0 0.3rem;
+    /* font-size: 2rem; */
+    cursor: pointer;
 }
 
 .github {
@@ -81,4 +94,24 @@
 .github a:hover {
     color: var(--tertiary);
     opacity: 1;
+}
+
+@media only screen and (max-width: 500px) {
+    .item {
+        flex-direction: column;
+    }
+    .imageContainer {
+        width: 100%;
+    }
+    .textContainer {
+        width: 100%;
+        padding-left: 0rem;
+    }
+    .textContainer h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .navigation {
+        justify-content: center;
+    }
 }

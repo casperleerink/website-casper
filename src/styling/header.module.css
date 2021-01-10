@@ -88,3 +88,55 @@
 .active {
     color: var(--tertiary)
 }
+
+@media only screen and (max-width: 500px) {
+    .header {
+        flex-direction: column;
+        padding: 0.5rem 5%;
+        padding-bottom: 1rem;
+    }
+    .title {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .title::after {
+        content: "My name, and also a link :o";
+        position: absolute;
+        top: 0;
+        left: 10%;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: normal;
+        opacity: 0.15;
+        font-size: 0.8rem;
+    }
+    .navItems {
+        width: 100%;
+    }
+    .navItem p {
+        display: block;
+    }
+    .aboutSide {
+        left: 0;
+    }
+    .musicSide {
+        bottom: -20%;
+    }
+    .videoSide {
+        top: -20%;
+    }
+    .codeSide {
+        bottom: -20%;
+        left: -110%;
+    }
+    .link {
+        padding: 0.5rem;
+    }
+    .navItem:last-child .link {
+        padding-right: 0rem;
+    }
+    .navItem:first-child .link {
+        padding-left: 0rem;
+    }
+}

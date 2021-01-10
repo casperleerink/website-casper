@@ -12,7 +12,7 @@ function CImage({cloudName, photoId, className, crop, aspectRatio=null, gravity=
         const rect = container.current.getBoundingClientRect();
         const currentWidth = parseInt(rect.width * 2);
         setW(currentWidth);
-    }, [])
+    }, [photoId]);
     return (
         <div ref={container} className={className}>
             {!loaded && 

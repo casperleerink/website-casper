@@ -10,6 +10,9 @@
 .textContainer {
     width: 55%;
 }
+.gridImage {
+    width: 40%;
+}
 .imgContainer {
     /* margin-top: 4.8rem; */
     display: block;
@@ -107,17 +110,35 @@
 /* .wikiContent li:nth-child(even) {
     color: rgb(0, 51, 50);
 } */
-@media (max-width: 800px) {
+
+@media (max-width: 500px) {
     .container {
-        flex-flow: column nowrap;
+        flex-flow: column-reverse nowrap;
+    }
+    .title {
+        margin-top: 1rem;
+    }
+    .title::after {
+        content: "Hi?";
+        position: absolute;
+        top: -15%;
+        left: 30%;
+        width: 10%;
+        font-size: 1rem;
+        font-weight: normal;
+        color: var(--text);
+        font-family: 'Shadows Into Light', cursive;
+        opacity: 0.3;
     }
     .textContainer {
         padding: 0;
+        width: 100%;
     }
-}
-
-@media (max-width: 600px) {
+    .gridImage {
+        width: 100%;
+        padding-top: 2rem;
+    }
     .wikiContainer {
-        padding: 0;
+        padding: 0 5%;
     }
 }
