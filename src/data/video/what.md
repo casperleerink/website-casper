@@ -6,4 +6,13 @@ youtube: https://youtu.be/ZO3-t-HrzPM
 ---
 
 ## What do you see?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rerum sit aperiam eius, quos voluptate possimus illo est reprehenderit tenetur, dolorum dolorem! Incidunt veritatis tenetur repellat tempore, fugit doloribus facere?
+
+*What?* is an interactive performance that involves live video, live electronic music and piano. All of the elements in the performance are interacting with the pianist on stage. 
+
+Music, Video and interactive software created by Casper Leerink.
+
+Lighting designer - Rita Wei
+
+Stage Manager - Ryer Wang
+
+Special thanks to [Ash Tanasiychuk](https://vandocument.com/) and [Xinyue Liu](https://www.liuxinyue.com/) for the documentation.
