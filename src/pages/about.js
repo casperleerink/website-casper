@@ -49,7 +49,6 @@ function About({data}) {
                 </div>
             </div>
             <div className={style.wikiContainer}>
-                <h1 className={style.quote}><em>'Casper, your bio is so short! I want to read more!'</em></h1>
                 <button className={style.button} onClick={fetchComposer}>Fetch Composer Biography!</button>
                 {composerTitle && <h1 className={style.title}>{composerTitle}</h1>}
                 {composerDescription && <div 
