@@ -3,6 +3,7 @@ import React, {useRef, useEffect} from 'react'
 import style from '../styling/code.module.css'
 import CImage from '../components/CImage'
 import {GrNext, GrPrevious} from 'react-icons/gr'
+import {Image, Transformation} from 'cloudinary-react'
 
 function CodeItem({node, idx, amt, nodes, callback}) {
     const itemRef = useRef(null);
@@ -37,8 +38,10 @@ function CodeItem({node, idx, amt, nodes, callback}) {
         <div className={style.navigation}>
             <button className={style.button} aria-label="Previous" onClick={() => handleBtn(idx > 0 ? idx-1 : amt)}><GrPrevious/></button>
             {nodes.map((n, i) => (
-                <button className={style.dot} aria-label={`Go to: ${n.frontmatter.title}`} onClick={() => handleBtn(i)}>
-                    °
+                <button className={`${style.dot} ${i === idx ? style.active : ""}`} aria-label={`Go to: ${n.frontmatter.title}`} onClick={() => handleBtn(i)}>
+                    <Image secure="true" cloudName="casperleerink" publicId={n.frontmatter.image} style={{width: "100%", display: "block"}}>
+                        <Transformation width={16} crop={"fill"} aspectRatio={1}/>
+                    </Image>
                 </button>
             ))}
             <button className={style.button} aria-label="Next" onClick={() => handleBtn(idx >= amt ? 0 : idx+1)}><GrNext/></button>

@@ -5,6 +5,7 @@ import style from "../styling/about.module.css"
 import CImage from "../components/CImage"
 import {gsap} from "gsap"
 import Footer from '../components/Footer'
+import SEO from '../components/seo'
 
 function About({data}) {
     const [composerTitle, setComposerTitle] = useState("");
@@ -30,6 +31,7 @@ function About({data}) {
     }, []);
     return (
         <Layout>
+            <SEO title="About"/>
             <div className={style.container}>
                 <div className={style.textContainer}>
                     <h1 className={style.title}>{frontmatter.title}</h1>

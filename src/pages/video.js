@@ -16,7 +16,7 @@ function VideoPage({data}) {
     // }, []);
     return (
         <Layout>
-            <SEO title="Music"/>
+            <SEO title="Video"/>
             <div className={style.container}>
                 <h1>Selected Videos</h1>
                     <ul className={style.ul}>

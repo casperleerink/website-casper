@@ -54,7 +54,7 @@
     border: none;
     background-color: inherit;
     border-radius: 0.5rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem;
     cursor: pointer;
 }
 .button svg {
@@ -63,9 +63,14 @@
 .dot {
     border: none;
     background-color: inherit;
-    padding: 0 0.3rem;
+    padding: 0.3rem;
     /* font-size: 2rem; */
     cursor: pointer;
+    opacity: 0.4;
+}
+.dot.active {
+    /* background-color: var(--tertiary); */
+    opacity: 1;
 }
 
 .github {
