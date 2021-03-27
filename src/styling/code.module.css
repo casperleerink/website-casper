@@ -1,122 +1,122 @@
 .container {
-    padding: 5%;
-    overflow-x: hidden;
+  padding: 5%;
+  overflow-x: hidden;
 }
 
 .container h1 {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .item {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    opacity: 0;
-    padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  opacity: 1;
+  padding: 1rem 0;
 }
 
 .imageContainer {
-    display: block;
-    width: 50%;
-    /* position: relative; */
+  display: block;
+  width: 50%;
+  /* position: relative; */
 }
 .textContainer {
-    display: block;
-    width: 50%;
-    padding-left: 1rem;
+  display: block;
+  width: 50%;
+  padding-left: 1rem;
 }
 .textContainer h2 {
-    font-weight: bold;
-    font-size: 2rem;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .image {
-    opacity: 1;
-    background-color: var(--secondary);
+  opacity: 1;
+  background-color: var(--secondary);
 }
 .image img {
-    transition: opacity 0.3s;
-    opacity: 0.7;
+  transition: opacity 0.3s;
+  opacity: 0.7;
 }
 .image:hover img {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 .navigation {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .button {
-    border: none;
-    background-color: inherit;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    cursor: pointer;
+  border: none;
+  background-color: inherit;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 .button svg {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 .dot {
-    border: none;
-    background-color: inherit;
-    padding: 0.3rem;
-    /* font-size: 2rem; */
-    cursor: pointer;
-    opacity: 0.4;
+  border: none;
+  background-color: inherit;
+  padding: 0.3rem;
+  /* font-size: 2rem; */
+  cursor: pointer;
+  opacity: 0.4;
 }
 .dot.active {
-    /* background-color: var(--tertiary); */
-    opacity: 1;
+  /* background-color: var(--tertiary); */
+  opacity: 1;
 }
 
 .github {
-    padding: 2rem;
-    font-size: 5rem;
-    width: 100%;
-    display: block;
-    text-align: center;
+  padding: 2rem;
+  font-size: 5rem;
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 .github a {
-    position:relative;
+  position: relative;
 }
 .github a:hover::after {
-    content: "Find repositories on my github page.";
-    position: absolute;
-    top: -30%;
-    left: -50%;
-    width: 400%;
-    font-size: 1rem;
-    font-weight: normal;
-    color: var(--text);
-    font-family: 'Shadows Into Light', cursive;
-    opacity: 0.3;
+  content: "Find repositories on my github page.";
+  position: absolute;
+  top: -30%;
+  left: -50%;
+  width: 400%;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--text);
+  font-family: "Shadows Into Light", cursive;
+  opacity: 0.3;
 }
 
 .github a:hover {
-    color: var(--tertiary);
-    opacity: 1;
+  color: var(--tertiary);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 500px) {
-    .item {
-        flex-direction: column;
-    }
-    .imageContainer {
-        width: 100%;
-    }
-    .textContainer {
-        width: 100%;
-        padding-left: 0rem;
-    }
-    .textContainer h2 {
-        font-weight: bold;
-        font-size: 1.5rem;
-    }
-    .navigation {
-        justify-content: center;
-    }
+  .item {
+    flex-direction: column;
+  }
+  .imageContainer {
+    width: 100%;
+  }
+  .textContainer {
+    width: 100%;
+    padding-left: 0rem;
+  }
+  .textContainer h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .navigation {
+    justify-content: center;
+  }
 }
