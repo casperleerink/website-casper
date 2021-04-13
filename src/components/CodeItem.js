@@ -1,9 +1,9 @@
-import gsap from "gsap/gsap-core"
 import React, { useRef, useEffect } from "react"
 import style from "../styling/code.module.css"
 import CImage from "../components/CImage"
 import { GrNext, GrPrevious } from "react-icons/gr"
 import { Image, Transformation } from "cloudinary-react"
+import gsap from "gsap/gsap-core"
 
 function CodeItem({ node, idx, amt, nodes, callback }) {
   const itemRef = useRef(null)

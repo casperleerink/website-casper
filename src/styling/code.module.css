@@ -1,9 +1,15 @@
 .container {
-  padding: 5%;
+  /* padding: 5%; */
   overflow-x: hidden;
 }
-
-.container h1 {
+.intro {
+  padding-top: 3%;
+  padding-right: 5%;
+  text-align: right;
+  padding-left: 20%;
+  margin-bottom: 5rem;
+}
+.intro h1 {
   font-size: 2rem;
   font-weight: bold;
 }
@@ -102,6 +108,10 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .intro {
+    padding-left: 5%;
+    text-align: left;
+  }
   .item {
     flex-direction: column;
   }
