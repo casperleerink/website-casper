@@ -13,6 +13,12 @@
   font-size: 2rem;
   font-weight: bold;
 }
+.intro a {
+  color: var(--tertiary);
+}
+.intro a:hover {
+  text-decoration: underline;
+}
 
 .item {
   width: 100%;

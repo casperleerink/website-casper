@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
@@ -23,21 +23,18 @@ function CodePage({ data }) {
         <div className={style.intro}>
           <h1>Web Portfolio</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati,
-            mollitia provident aspernatur aperiam illum culpa laudantium maiores
-            quaerat! Delectus expedita, a dignissimos incidunt mollitia quos sit
-            eligendi ad enim vero!
+            Below you can see some of the websites that I have made. It includes
+            personal websites for some of my clients as well as web applications
+            for art projects.
+            <br />
+            Are you looking for someone to create and/or design a website for
+            you? Scroll down to send me an email!
+            <br />
+            For all of my code, please refer to my{" "}
+            <a href="https://github.com/casperleerink">Github</a> page!
           </p>
         </div>
         <Websites nodes={nodes} />
-        {/* <CodeItem
-          node={currentNode}
-          idx={currentIndex}
-          amt={nodes.length - 1}
-          nodes={nodes}
-          callback={idx => setCurrentIndex(idx)}
-        /> */}
-        {/* <ImageGallery imgs={Items} amount={data.allMarkdownRemark.nodes.length}/> */}
         <div className={style.github}>
           <a
             href="https://github.com/casperleerink"
