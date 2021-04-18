@@ -12,6 +12,8 @@
   position: absolute;
   transition: 0.5s ease-out;
   overflow: hidden;
+  letter-spacing: 0.1rem;
+  /* color: var(--background); */
 }
 .title {
   opacity: 0;
@@ -60,11 +62,13 @@
   left: 0;
   width: 32%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
+  color: var(--background);
+  background-color: var(--tertiary);
+  /* background: linear-gradient(
+    to right,
     rgba(2, 120, 174, 1),
     rgba(2, 120, 174, 0.5)
-  );
+  ); */
 }
 
 .box2 {
@@ -72,44 +76,52 @@
   left: 32%;
   width: 28%;
   height: 55%;
-  background: linear-gradient(
-    to bottom,
+  color: var(--text);
+  background-color: var(--primary);
+  /* background: linear-gradient(
+    to right,
     rgba(165, 236, 215, 1),
     rgba(165, 236, 215, 0.2)
-  );
+  ); */
 }
 .box3 {
   top: 55%;
   left: 32%;
   width: 28%;
   height: 45%;
-  background: linear-gradient(
+  color: var(--background);
+  background-color: var(--text);
+  /* background: linear-gradient(
     to bottom,
     rgba(51, 51, 51, 1),
     rgba(51, 51, 51, 0.2)
-  );
+  ); */
 }
 .box4 {
   top: 0%;
   left: 60%;
   width: 40%;
   height: 35%;
-  background: linear-gradient(
+  color: var(--background);
+  background-color: var(--text);
+  /* background: linear-gradient(
     to bottom,
     rgba(51, 51, 51, 1),
     rgba(51, 51, 51, 0.4)
-  );
+  ); */
 }
 .box5 {
   top: 35%;
   left: 60%;
   width: 40%;
   height: 65%;
-  background: linear-gradient(
+  color: var(--background);
+  background-color: var(--tertiary);
+  /* background: linear-gradient(
     to bottom,
     rgba(2, 120, 174, 1),
     rgba(2, 120, 174, 0.5)
-  );
+  ); */
 }
 
 @media only screen and (max-width: 500px) {

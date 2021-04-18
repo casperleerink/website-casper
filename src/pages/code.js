@@ -55,13 +55,16 @@ export default CodePage
 export const codeQuery = graphql`
   query {
     allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "code" } } }
+      filter: { frontmatter: { templateKey: { eq: "codeItem" } } }
     ) {
       nodes {
         frontmatter {
           title
           image
           url
+        }
+        fields {
+          slug
         }
         html
       }
