@@ -20,6 +20,11 @@
 }
 .textContainer h1 {
   font-size: 2em;
+  color: var(--text);
+}
+.textContainer p {
+  max-width: 55ch;
+  color: var(--text-lighter);
 }
 .description {
   padding: 1rem 0;
