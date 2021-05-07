@@ -1,7 +1,13 @@
 .container {
   padding: 5%;
-  background-color: var(--secondary);
+  background: linear-gradient(
+    to bottom,
+    var(--background),
+    var(--secondary-dark)
+  );
+  /* color: var(--text-lighter); */
   display: flex;
+  align-items: center;
 }
 .textContainer {
   width: 50%;
@@ -33,21 +39,33 @@
   margin: 0.5rem 1rem 0.5rem 0;
   position: relative;
 }
+.stack a {
+  color: var(--text-lighter);
+}
 .stack li::after {
   position: absolute;
   content: "";
   bottom: 0;
   left: 0;
   width: 1.5rem;
-  border-bottom: 1px solid var(--tertiary);
+  border-bottom: 1px solid var(--secondary-dark);
   transition: width 0.5s ease;
 }
 .stack li:hover::after {
   width: 100%;
 }
-.textContainer button {
-  background-color: var(--text);
-  color: var(--secondary);
+.stack li:hover a {
+  color: var(--text);
+}
+
+.links {
+  padding-right: 1rem;
+}
+.links button {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--background-tint);
+  color: var(--text-lighter);
   font-size: 1.2em;
   /* font-weight: bold; */
   padding: 0.5rem;
@@ -57,7 +75,7 @@
   border-radius: 0.5rem;
   letter-spacing: 0.1rem;
   box-shadow: 4px 4px 1rem rgba(33, 33, 33, 0.3);
-  transition: padding 0.5s ease;
+  transition: padding 0.3s ease;
 }
 
 .textContainer button:hover {
@@ -65,9 +83,9 @@
 }
 
 .image {
-  /* border-radius: 1rem; */
+  border-radius: 1rem;
   overflow: hidden;
-  /* box-shadow: 4px 4px 1rem rgba(33, 33, 33, 0.3); */
+  box-shadow: 4px 4px 1rem rgba(33, 33, 33, 0.1);
 }
 @media only screen and (max-width: 800px) {
   .container {

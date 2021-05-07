@@ -1,17 +1,26 @@
 .container {
   /* padding: 5%; */
   overflow-x: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--background),
+    var(--secondary-dark)
+  );
 }
+
+/* intro */
 .intro {
-  padding-top: 3%;
-  padding-right: 5%;
-  text-align: right;
-  padding-left: 20%;
-  margin-bottom: 5rem;
+  padding: 3rem;
+  /* padding-bottom: 2rem; */
+  /* padding-left: 20%; */
 }
 .intro h1 {
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: bold;
+}
+.intro p {
+  color: var(--text-lighter);
+  max-width: 60ch;
 }
 .intro a {
   color: var(--tertiary);
@@ -20,119 +29,134 @@
   text-decoration: underline;
 }
 
-.item {
-  width: 100%;
+/* cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-rows: minmax(400px, 1fr);
+  gap: 1rem;
+  padding: 2rem 3rem;
+  padding-bottom: 5rem;
+}
+
+.card {
+  background: linear-gradient(
+    to right,
+    var(--primary-light),
+    var(--secondary-dark),
+    var(--grey-blue)
+  );
+  color: var(--text-lighter);
+  box-shadow: 0.5rem 1rem 2rem rgba(20, 20, 20, 0.16);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-0.5rem);
+}
+.cardLink {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.cardLink:hover {
+  opacity: 0.9;
+}
+.cardImage {
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.cardSubtitle {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 0 1rem;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+.cardTitle {
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  padding: 0 1rem;
+  /* margin-top: -0.5rem; */
+  color: var(--text);
+  font-weight: bolder;
+}
+.cardContent {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  opacity: 1;
-  padding: 1rem 0;
-}
-
-.imageContainer {
-  display: block;
-  width: 50%;
-  /* position: relative; */
-}
-.textContainer {
-  display: block;
-  width: 50%;
-  padding-left: 1rem;
-}
-.textContainer h2 {
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-.image {
-  opacity: 1;
-  background-color: var(--secondary);
-}
-.image img {
-  transition: opacity 0.3s;
-  opacity: 0.7;
-}
-.image:hover img {
-  opacity: 0.5;
-}
-.navigation {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
+  padding: 1rem;
+  padding-top: 3rem;
   align-items: center;
+  font-weight: 200;
 }
-
-.button {
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.cardActions a {
+  margin: 0.2rem;
+}
+.cardActions button {
+  cursor: pointer;
+  /* margin: 0.25rem; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: var(--light-blue);
   border: none;
-  background-color: inherit;
-  border-radius: 0.5rem;
   padding: 0.5rem;
-  cursor: pointer;
+  transition: padding 0.3s ease-in-out;
 }
-.button svg {
-  font-size: 1.3rem;
+.cardActions button:hover {
+  padding: 0.5rem 0.8rem;
 }
-.dot {
-  border: none;
-  background-color: inherit;
-  padding: 0.3rem;
-  /* font-size: 2rem; */
-  cursor: pointer;
-  opacity: 0.4;
-}
-.dot.active {
-  /* background-color: var(--tertiary); */
-  opacity: 1;
+.cardActions svg {
+  box-sizing: content-box;
+  padding-right: 1ch;
 }
 
-.github {
-  padding: 2rem;
-  font-size: 5rem;
+/* icons  */
+.icons {
+  /* color: var(--text-lighter); */
+  margin-top: 1rem;
+  font-size: 1.5rem;
   width: 100%;
   display: block;
-  text-align: center;
+  /* text-align: center; */
 }
-.github a {
-  position: relative;
+.icons a {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 2rem;
+  color: var(--text-lighter);
+  transition: color 0.3s ease-in-out;
 }
-.github a:hover::after {
-  content: "Find repositories on my github page.";
-  position: absolute;
-  top: -30%;
-  left: -50%;
-  width: 400%;
-  font-size: 1rem;
-  font-weight: normal;
+.icons a:hover {
   color: var(--text);
-  font-family: "Shadows Into Light", cursive;
-  opacity: 0.3;
+  text-decoration: none;
 }
 
-.github a:hover {
-  color: var(--tertiary);
-  opacity: 1;
+.icons svg {
+  box-sizing: content-box;
+  padding-right: 0.5ch;
 }
 
 @media only screen and (max-width: 500px) {
+  .cards {
+    padding: 2rem 1.5rem;
+  }
   .intro {
     padding-left: 5%;
     text-align: left;
   }
-  .item {
-    flex-direction: column;
-  }
-  .imageContainer {
-    width: 100%;
-  }
-  .textContainer {
-    width: 100%;
-    padding-left: 0rem;
-  }
-  .textContainer h2 {
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  .navigation {
-    justify-content: center;
+  .intro h1 {
+    font-size: 2rem;
   }
 }
